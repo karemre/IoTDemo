@@ -1,5 +1,5 @@
 FROM hypriot/rpi-java
-COPY randomGenerator.java .
-RUN javac randomGenerator.java
-CMD ["java","randomGenerator"]
+COPY HeatControl.java .
+RUN javac HeatControl.java
+CMD ["java","HeatControl"]
 EXPOSE 9898
