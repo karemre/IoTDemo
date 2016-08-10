@@ -1,5 +1,5 @@
 #!/bin/sh
 
 var="FROM java:7" 
-sed "1s/.*/$var/" @heat_control/Dockerfile
+sed "1s/.*/$var/" heat_control/Dockerfile
 
