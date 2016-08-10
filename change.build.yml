@@ -1,0 +1,14 @@
+---
+platform: linux
+
+image: docker:///ubuntu
+
+inputs: 
+  - name: heat_control
+
+params:
+  build: heat_control
+
+run:
+ path: heat_control/change
+
