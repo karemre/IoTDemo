@@ -1,6 +1,7 @@
 {
-    "memory": 2000000000,
+    "memory": "10942637568L",
     "cpu": "none",
-    "latency": "none",
+    "computation": "high",
+    "latency": "low",
     "privacy": "none"
 }
