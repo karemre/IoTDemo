@@ -1,5 +1,4 @@
 #!/bin/sh
 
-var="FROM java:7" 
-sed "1s/.*/$var/" heat_control/Dockerfile
-
+rm heat_control/Dockerfile
+echo 'FROM hypriot/rpi-java\nCOPY HeatControl.java .\nEXPOSE 9898' > heat_control/Dockerfile
