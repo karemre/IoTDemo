@@ -78,7 +78,7 @@ public class HeatControl {
                 for(int i = 1; i < args.length ; i++){
                     //client.connect(args[0]);
                     
-                    Runnable r = new MyThread(args[0]);
+                    Runnable r = new MyThread(args[i]);
                     new Thread(r).start();
                 }
             }
