@@ -6,29 +6,29 @@
         {
             "id": "9.1.75.84",
             "label": "node-A",
-            "level": 1
+            "level": 2
         },
         {
             "id": "9.1.75.111",
             "label": "node-B",
-            "level": 0
+            "level": 1
         },
         {
             "id": "9.1.75.52",
             "label": "node-C",
-            "level": 0
+            "level": 1
         }
     ],
     "links": [
         {
             "source": "9.1.75.84",
             "target": "9.1.75.111",
-            "cost": 2.000
+            "cost": 1.000
         },
         {
             "source": "9.1.75.84",
             "target": "9.1.75.52",
-            "cost": 2.000
+            "cost": 1.000
         },
         {
             "source": "9.1.75.111",
