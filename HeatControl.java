@@ -7,9 +7,12 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Enumeration;
 
+import javax.net.ssl.HostnameVerifier;
+
 public class HeatControl {
 
             private BufferedReader in;
+            static String hostIp;
             public void connect(String source) throws Exception {
 
                 // Make connection and initialize streams
@@ -34,7 +37,7 @@ public class HeatControl {
                     actuate = "normal";
                 
                 //String hostIp = (InetAddress.getLocalHost()).getHostAddress();
-                String hostIp = getLocalHostLANAddress().toString();
+                //String hostIp = getLocalHostLANAddress().toString();
                 
                 String date = (new SimpleDateFormat("HH:mm:ss")).format((Calendar.getInstance()).getTime());
                 
@@ -130,8 +133,9 @@ public class HeatControl {
             public static void main(String[] args) throws Exception {
                 HeatControl client = new HeatControl();
                 //client.connect();
-                for (String s: args) {
-                        client.connect(s);
+                hostIp = args[0];
+                for(int i = 1; i < args.length ; i++){
+                    client.connect(args[0]);
                 }
             }
 
