@@ -2,6 +2,7 @@
     "memory": "10942637568L",
     "cpu": "none",
     "computation": "high",
-    "latency": "low",
+    "bandwith": "low"
+    "latency": "none",
     "privacy": "none"
 }
