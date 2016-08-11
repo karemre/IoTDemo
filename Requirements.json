@@ -4,5 +4,5 @@
     "computation": "low",
     "bandwith": "high",
     "latency": "none",
-    "privacy": "none"
+    "privacy": "1"
 }
