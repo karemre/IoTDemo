@@ -1,14 +1,16 @@
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.InetAddress;
+import java.net.NetworkInterface;
+import java.net.UnknownHostException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Enumeration;
 
 public class HeatControl {
 
             private BufferedReader in;
-            public void connect(String source) throws IOException {
+            public void connect(String source) throws Exception {
 
                 // Make connection and initialize streams
                 // Socket socket = new Socket(source, 32769);
@@ -32,7 +34,7 @@ public class HeatControl {
                     actuate = "normal";
                 
                 //String hostIp = (InetAddress.getLocalHost()).getHostAddress();
-                String hostIp = getLocalHostLANAddres().toString();
+                String hostIp = getLocalHostLANAddress().toString();
                 
                 String date = (new SimpleDateFormat("HH:mm:ss")).format((Calendar.getInstance()).getTime());
                 
@@ -78,7 +80,7 @@ public class HeatControl {
              *
              * @throws UnknownHostException If the LAN address of the machine cannot be found.
              */
-            private static InetAddress getLocalHostLANAddress() throws Exception {
+            private InetAddress getLocalHostLANAddress() throws Exception {
                 try {
                     InetAddress candidateAddress = null;
                     // Iterate all NICs (network interface cards)...
@@ -124,6 +126,7 @@ public class HeatControl {
                     throw unknownHostException;
                 }
             }
+
             public static void main(String[] args) throws Exception {
                 HeatControl client = new HeatControl();
                 //client.connect();
