@@ -1,4 +1,0 @@
-#!/bin/sh
-
-cp HeatControl.java 32/
-cp HeatControl.java 64/
