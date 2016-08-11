@@ -1,4 +1,4 @@
 #!/bin/sh
 
-cp heat_control/HeatControl.java heat_control/32/
-cp heat_control/HeatControl.java heat_control/64/
+cp HeatControl.java 32/
+cp HeatControl.java 64/

@@ -1,3 +1,3 @@
 FROM hypriot/rpi-java
-COPY heat_control/HeatControl.java .
+COPY HeatControl.java .
 EXPOSE 9898
