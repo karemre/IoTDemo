@@ -1,8 +1,8 @@
 {
     "memory": "10942637568L",
     "cpu": "none",
-    "computation": "high",
-    "bandwith": "low",
+    "computation": "low",
+    "bandwith": "high",
     "latency": "none",
     "privacy": "none"
 }
