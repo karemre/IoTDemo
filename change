@@ -1,4 +1,5 @@
 #!/bin/sh
 
 rm heat_control/Dockerfile
+touch heat_control/Dockerfile
 echo 'FROM hypriot/rpi-java\nCOPY HeatControl.java .\nEXPOSE 9898' > heat_control/Dockerfile
