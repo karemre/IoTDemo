@@ -1,0 +1,26 @@
+jobs:
+- name: job-pipeline
+  plan:
+  - get: heat_control
+    trigger: true
+  - put: new-image
+    params: {build: heat_control}
+  - task: notify
+    privileged: true
+    file: heat_control/run.build.yml
+
+resources:
+- name: heat_control
+  type: git
+  source:
+    uri: https://github.com/karemre/IoTDemo.git
+    branch: master
+    skip_ssl_verification: GIT_SSL_NO_VERIFY=true
+
+- name: new-image
+  type: docker-image
+  source:
+    email: yigitogluemre@gmail.com
+    username: eyigitoglu
+    password: raspberryPi
+    repository: eyigitoglu/heatcontrol

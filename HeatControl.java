@@ -50,7 +50,7 @@ public class HeatControl {
                                
                            try {
                                
-                               String command = "curl -i --data " + result + " -X POST http://9.1.189.10:8000/results";
+                               String command = "curl -i --data " + result + " -X POST http://9.1.196.15:8000/results";
                                Process p = Runtime.getRuntime().exec(command);             
                                p.waitFor(); 
                                BufferedReader reader = new BufferedReader(new InputStreamReader(p.getInputStream()));
