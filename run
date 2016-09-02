@@ -2,5 +2,5 @@
 
 apt-get update
 apt-get install -y curl
-curl -i --data @heat_control/ResourceTopology.json -X POST http://9.1.196.15:8080/topology
-curl -i --data @heat_control/Requirements.json -X POST http://9.1.196.15:8080/requirements
+curl -i --data @heat_control/ResourceTopology.json -X POST http://9.1.75.126:8080/topology
+curl -i --data @heat_control/Requirements.json -X POST http://9.1.75.126:8080/requirements
